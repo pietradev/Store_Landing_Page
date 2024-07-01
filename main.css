@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 25% 50%;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffcee4 ;
+    padding: 5px 20px 0;
+
+}
+
+
+.container img{
+    width: 40%;
+}
+
+.menu-buttom img{
+    width: 10%;
+    cursor: pointer;
+}
+
+.container .search-bar input {
+    width: 55%;
+    height: 25px;
+}
+
+header .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+form input {
+    border-radius: 4px;
+}
+
+
+form .search-icon {
+    width: 7%;
+    cursor: pointer;
+    padding-left: 4px;
+}
+
+nav {
+    background-color: #ff9bc8;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.menu ul li {
+    list-style: none;
+
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #0f1021;
+}
+
+
+
+.menu ul li:hover a {
+    border-top: 7px solid #fff;
+}
+
+section{
+    margin-top: 30px;
+}
+
+.about-store {
+    display: grid;
+    grid-template-columns: 40% 25% 5%;
+    justify-content: center;
+}
+
+.carousel {
+    width: 80%; /* Adjust as needed */
+    max-height: 500px; /* Set maximum height */
+  }
+  
+  .carousel img {
+    width: 100%; /* Ensure the image takes full width */
+    height: auto; /* Allow the height to adjust */
+    object-fit:cover; /* Cover the entire container without stretching */
+    z-index: 1;
+    position: relative;
+    
+  }
+
+.products{
+    margin: 0 auto; /* Center the block element horizontally */
+    padding: 5% 15%; /* Add some padding for spacing */
+}
+h2 {
+    margin-bottom: 25px;
+    color: #1f2144;
+    border-bottom:2px solid  #ff9bc8;
+}
+
+.products .container-products img {
+    max-width: 100%;
+}
+.products div{
+    margin-bottom: 10px;
+}
+.products .container-products{
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
+    column-gap: 3%;
+}
+
+.products .container-products h3, p {
+    margin-bottom: 10px;
+}
+
+.products .container-products button{
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color:#fc6aac;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.contact-us form{
+   display:grid;
+   justify-content: center;
+
+}
+
+.contact-us form input, textarea{
+    width: 50vw;
+    height: 4.5vh;
+    margin-bottom: 18px;
+}
+
+.contact-us form  textarea{
+    width: 50vw;
+    height: 15vh;
+    resize: none;
+}
+
+.container-contact-us{
+    width: 80%;
+}
+
+.contact-us form button{
+    background-color: #fc6aac;
+    border: none;
+    height: 35px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer{
+    display: grid;
+    justify-content: center;
+    margin-top: 5%;
+    padding: 13px 0;
+    width: 100%;
+    color: #fff;
+    background-color: #fc6aac;
+}
+
+footer p{
+    justify-content: center;
+}
+/*Small screens*/
+@media screen and (max-width: 640px){
+   
+    /*Reorganizing the header*/
+   header .container{
+    padding-bottom: 35px;
+   }
+    .container{
+    align-items: center;
+   }
+
+    header .logo{
+        display: block;
+   }
+   header .logo .logo-img{
+         width: 45vh;
+         padding-top: 30px;
+    }
+   header .menu-buttom img{
+        width: 5vh;
+   }
+
+   header .logo form{
+    padding-top: 15px;
+   }
+   
+   header .logo form{
+    width: 70vw;
+   }
+   header .logo form img{
+    width: 2.5vh;
+   }
+    /*Reorganizing the menu*/
+   .menu {
+    padding: 20px 0;
+   }
+
+   .menu ul {
+        flex-direction: column; /* Stack header/footer items vertically */
+        text-align: center; /* Center align text */
+
+   }
+   .menu ul li {
+    padding: 5px 0;
+}
+
+    .menu ul li:hover a {
+        border-top: none;
+        border-bottom: 7px solid #fff;
+    }
+
+      /*Reorganizing the first section*/
+
+      .about-store {
+        display: grid;
+        grid-template-columns: 75vw;
+        justify-content: center;
+    }
+    
+    .carousel {
+        width: 100%; /* Adjust as needed */
+        max-height: 500px; /* Set maximum height */
+      }
+
+    /*Products Section*/
+      
+    .products .container-products img {
+        max-width: 100%;
+    }
+    .products div{
+        margin-bottom: 80px;
+    }
+    .products .container-products{
+        display:block;
+
+    }
+
+ /*Contact Us portion*/
+    .contact-us{
+        display:grid;
+        justify-content: center;
+     
+     }
+     
+     .contact-us form input, textarea{
+         width: 80vw;
+         height: 4.5vh;
+         margin-bottom: 18px;
+     }
+     
+
+     .contact-us form  textarea{
+         width: 80vw;
+         height: 15vh;
+         resize: none;
+     }
+     
+     .container-contact-us{
+         width: 100%;
+     }
+    
+}
+/*Medium screens*/
+@media screen and (min-width:641px) and (max-width: 1023px){
+    /*Reorganizing the header*/
+    header .container{
+        padding-bottom: 35px;
+    }
+    
+    .container{
+        align-items: center;
+    }
+    
+    header .logo{
+        display: block;
+    }
+    header .logo .logo-img{
+        width: 45vh;
+        padding-top: 30px;
+    }
+    header .menu-buttom img{
+        width: 5vh;
+    }
+    
+    header .logo form{
+        padding-top: 15px;
+    }
+       
+    header .logo form{
+        width: 70vw;
+    }
+    header .logo form img{
+        width: 2.5vh;
+    }
+        /*Reorganizing the menu*/
+    .menu {
+        padding: 20px 0;
+    }
+    
+    .menu ul {
+        display: grid;
+        row-gap: 10px;
+    
+    }
+    
+    .menu ul li:hover a {
+        border-top: none;
+        border-bottom: 7px solid #fff;
+    }
+    /*Reorganizing the first section*/
+    
+    .about-store {
+        display: grid;
+        grid-template-columns: 75vw;
+        justify-content: center;
+    }
+        
+    .carousel {
+        width: 100%; /* Adjust as needed */
+        max-height: 500px; /* Set maximum height */
+    }
+    
+    /*Products Section*/
+          
+    .products .container-products img {
+        max-width: 100%;
+    }
+    .products div{
+        margin-bottom: 80px;
+    }
+    .products .container-products{
+        display:grid;
+        grid-template-columns: repeat(2, 32%);
+        column-gap: 15%;
+    }
+    
+     /*Contact Us portion*/
+    .contact-us{
+        display:grid;
+        justify-content: center;
+         
+    }
+         
+    .contact-us form input, textarea{
+        width: 80vw;
+        height: 4.5vh;
+        margin-bottom: 18px;
+    }
+         
+    
+    .contact-us form  textarea{
+        width: 80vw;
+        height: 15vh;
+        resize: none;
+    }
+         
+    .container-contact-us{
+         width: 100%;
+     }
+}
+
+
+
+
